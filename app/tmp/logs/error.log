@@ -1,0 +1,287 @@
+2018-06-18 07:29:06 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /cake_install/users/login
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-18 07:33:48 Error: [MissingViewException] View file "Users/logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/logout.ctp',
+)
+Request URL: /cake_install/users/logout
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Users/logout')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 07:45:11 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /cake_install/index
+Stack Trace:
+#0 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-18 07:46:48 Error: [MissingControllerException] Controller class PagessController could not be found.
+Exception Attributes: array (
+  'class' => 'PagessController',
+  'plugin' => NULL,
+)
+Request URL: /cake_install/pagess
+Stack Trace:
+#0 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-18 07:50:47 Error: [MissingViewException] View file "Users/signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/signup.ctp',
+)
+Request URL: /cake_install/users/signup
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Users/signup')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 07:51:15 Error: [MissingViewException] View file "Users/logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/logout.ctp',
+)
+Request URL: /cake_install/users/logout
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Users/logout')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 07:55:08 Error: [MissingViewException] View file "Pages/signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/signup.ctp',
+)
+Request URL: /cake_install/pages/signup
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/signup')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render('signup', NULL)
+#2 /var/www/html/cake_install/app/Controller/PagesController.php(72): Controller->render('signup')
+#3 [internal function]: PagesController->display('signup')
+#4 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2018-06-18 07:57:06 Error: [MissingViewException] View file "Users/signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/signup.ctp',
+)
+Request URL: /cake_install/users/signup
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Users/signup')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 07:57:12 Error: [MissingViewException] View file "Users/logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/logout.ctp',
+)
+Request URL: /cake_install/users/logout
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Users/logout')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 08:15:14 Error: [MissingViewException] View file "Pages/signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/signup.ctp',
+)
+Request URL: /cake_install/pages/signup
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/signup')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render('signup', NULL)
+#2 /var/www/html/cake_install/app/Controller/PagesController.php(72): Controller->render('signup')
+#3 [internal function]: PagesController->display('signup')
+#4 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2018-06-18 08:15:27 Error: [MissingViewException] View file "Pages/signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/signup.ctp',
+)
+Request URL: /cake_install/pages/signup
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/signup')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render('signup', NULL)
+#2 /var/www/html/cake_install/app/Controller/PagesController.php(72): Controller->render('signup')
+#3 [internal function]: PagesController->display('signup')
+#4 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2018-06-18 08:15:31 Error: [MissingViewException] View file "Pages/signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/signup.ctp',
+)
+Request URL: /cake_install/pages/signup
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/signup')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render('signup', NULL)
+#2 /var/www/html/cake_install/app/Controller/PagesController.php(72): Controller->render('signup')
+#3 [internal function]: PagesController->display('signup')
+#4 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2018-06-18 08:15:38 Error: [MissingViewException] View file "Pages/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages/add.ctp',
+)
+Request URL: /cake_install/pages/add
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/View/View.php(470): View->_getViewFileName('Pages/add')
+#1 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(963): View->render('add', NULL)
+#2 /var/www/html/cake_install/app/Controller/PagesController.php(72): Controller->render('add')
+#3 [internal function]: PagesController->display('add')
+#4 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2018-06-18 08:19:36 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1
+Request URL: /cake_install/users/add
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `bo...')
+#3 /var/www/html/cake_install/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /var/www/html/cake_install/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(244): Model->save(Array)
+#6 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(393): Scaffold->_scaffoldSave(Object(CakeRequest), 'add')
+#7 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#8 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#10 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-06-18 08:19:55 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1
+Request URL: /cake_install/users/add
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `bo...')
+#3 /var/www/html/cake_install/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /var/www/html/cake_install/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(244): Model->save(Array)
+#6 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(393): Scaffold->_scaffoldSave(Object(CakeRequest), 'add')
+#7 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#8 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#10 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-06-18 08:20:06 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /cake_install/user
+Stack Trace:
+#0 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-18 08:21:36 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1
+Request URL: /cake_install/users/add
+Stack Trace:
+#0 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 /var/www/html/cake_install/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `bo...')
+#3 /var/www/html/cake_install/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /var/www/html/cake_install/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(244): Model->save(Array)
+#6 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(393): Scaffold->_scaffoldSave(Object(CakeRequest), 'add')
+#7 /var/www/html/cake_install/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#8 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/cake_install/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#10 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake_install/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2018-06-18 08:23:29 Error: [MissingControllerException] Controller class CakeInstallController could not be found.
+Exception Attributes: array (
+  'class' => 'CakeInstallController',
+  'plugin' => NULL,
+)
+Request URL: /cake_install/cake_install/users
+Stack Trace:
+#0 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-18 08:24:57 Error: [MissingControllerException] Controller class UserslogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'UserslogoutController',
+  'plugin' => NULL,
+)
+Request URL: /cake_install/userslogout
+Stack Trace:
+#0 /var/www/html/cake_install/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-18 10:03:43 Error: [Error] Call to undefined function _checkIfAlreadyLoginned()
+Request URL: /users/signup
+Stack Trace:
+#0 [internal function]: UsersController->signup()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 10:35:27 Error: [ParseError] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+Request URL: /users/signup
+Stack Trace:
+#0 [internal function]: App::load('UsersController')
+#1 [internal function]: spl_autoload_call('UsersController')
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(266): class_exists('UsersController')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-18 11:03:17 Error: [Error] Call to undefined function _checkIfEmailExist()
+Request URL: /users/signup
+Stack Trace:
+#0 [internal function]: UsersController->signup()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-18 11:22:18 Error: [MissingActionException] Action UsersController::admin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin',
+)
+Request URL: /users/admin
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
