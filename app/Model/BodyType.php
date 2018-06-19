@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Prefecture Model
+ * BodyType Model
  *
  * @property User $User
  */
-class Prefecture extends AppModel {
+class BodyType extends AppModel {
 
 /**
  * Validation rules
@@ -14,6 +14,16 @@ class Prefecture extends AppModel {
  */
 	public $validate = array(
 		'name' => array(
+			'notBlank' => array(
+				'rule' => array('notBlank'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'description' => array(
 			'notBlank' => array(
 				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
@@ -35,7 +45,7 @@ class Prefecture extends AppModel {
 	public $hasMany = array(
 		'User' => array(
 			'className' => 'User',
-			'foreignKey' => 'prefecture_id',
+			'foreignKey' => 'body_type_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

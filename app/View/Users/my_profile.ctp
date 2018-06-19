@@ -5,15 +5,15 @@
             <td>
                 <ul style="list-style-type:none;">
                     <li><b>Username</b>  : <?= ucfirst( $auth->user('username') );?></li>
-                    <li><b>Firstname</b> : <?= ucfirst( $data['firstname'] );?></li>
-                    <li><b>Lastname</b>  : <?= ucfirst( $data['lastname'] );?></li>
+                    <li><b>Firstname</b> : <?= ucfirst( $data['User']['firstname'] );?></li>
+                    <li><b>Lastname</b>  : <?= ucfirst( $data['User']['lastname'] );?></li>
                     <li><b>Age</b>       : <?php 
-                                                $temp = explode('-',$data['birthdate']);
+                                                $temp = explode('-',$data['User']['birthdate']);
                                                 $year = $temp[0];
                                                 echo date("Y") - (int)$year;
                                            ?>
                     </li>
-                    <li><b>Birthday</b>  : <?= $data['birthdate'];?></li>
+                    <li><b>Birthday</b>  : <?= $data['User']['birthdate'];?></li>
                 </ul>
             </td>
         </tr>
@@ -36,21 +36,21 @@
      <br><br>
      <h1><b>Basic Information</b></h1>
      <ul style="list-style-type:none;">
-         <li><b>Prefecture :</b> <?= $data['prefectures'];?></li>
-         <li><b>City : </b> <?= $data['city'];?></li>
-         <li><b>Address 1 :</b> <?= $data['address1'];?></li>
-         <li><b>Address 2 : </b><?= $data['address2'];?></li>
-         <li><b>Body Type : </b><?= $data['body_type'];?></li>
-         <li><b>Blood Type :</b> <?= $data['bloodtype'];?></li>
-         <li><b>Body Fats : </b><?= $data['bodyfat'];?></li>
-         <li><b>Body Weight :</b><?= $data['body_weight'];?></li>
+         <li><b>Prefecture :</b> <?= $data['Prefecture']['name'];?></li>
+         <li><b>City : </b> <?= $data['User']['city'];?></li>
+         <li><b>Address 1 :</b> <?= $data['User']['address1'];?></li>
+         <li><b>Address 2 : </b><?= $data['User']['address2'];?></li>
+         <li><b>Body Type : </b><?= $data['BodyType']['name'];?></li>
+         <li><b>Blood Type :</b> <?= $data['BloodType']['name'];?></li>
+         <li><b>Body Fats : </b><?= $data['User']['bodyfat'];?></li>
+         <li><b>Body Weight :</b><?= $data['User']['body_weight'];?></li>
      </ul>
      <br><br>
 <?php $this->end();?>
 
 <?php $this->start('introduction');?>
      <h1><b>Introduction!</b></h1>
-     <p><?= $data['intro']; ?></p>
+     <p><?= $data['User']['intro']; ?></p>
 <?php $this->end();?>
 
 

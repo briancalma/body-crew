@@ -44,6 +44,11 @@ class User extends AppModel {
 		),
 	);
 	
-	public $belongsTo = 'Prefecture';
-	
+	public $belongsTo = [
+							'Prefecture' => ['className' => 'Prefecture','foreignKey' => 'prefecture_id'],
+							'BloodType'  => ['className' => 'BloodType','foreignKey' => 'blood_type_id'],
+							'BodyType'   => ['className' => 'BodyType','foreignKey' => 'body_type_id']
+						];
+	# public $belongsTo = 'BloodType';
+	# public $belongsTo = 'BodyType';
 }

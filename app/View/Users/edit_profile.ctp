@@ -11,12 +11,11 @@
 		echo $this->Form->input('city');
 		echo $this->Form->input('address1');
 		echo $this->Form->input('address2');
-		echo $this->Form->input('bloodtype');
-		echo $this->Form->input('body_type');
+		echo $this->Form->input('blood_type_id');
+		echo $this->Form->input('body_type_id');
 		echo $this->Form->input('bodyfat');
 		echo $this->Form->input('body_weight');
 		echo $this->Form->input('intro');
-		
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Save')); ?>

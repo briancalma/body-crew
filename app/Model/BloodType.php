@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Prefecture Model
+ * BloodType Model
  *
  * @property User $User
  */
-class Prefecture extends AppModel {
+class BloodType extends AppModel {
 
 /**
  * Validation rules
@@ -35,7 +35,7 @@ class Prefecture extends AppModel {
 	public $hasMany = array(
 		'User' => array(
 			'className' => 'User',
-			'foreignKey' => 'prefecture_id',
+			'foreignKey' => 'blood_type_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

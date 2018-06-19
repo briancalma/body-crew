@@ -37,11 +37,16 @@ class UsersController extends AppController {
         {
             if( $this->Auth->login() ) 
             {
-                return $this->redirect($this->Auth->redirectUrl());
+                # debug($this->Auth->user());   
+                # debug($this->Auth->redirectUrl());
+                
+                if( empty($this->Auth->user('firstname')) || empty($this->Auth->user('lastname')) )
+                    return $this->redirect(['action' => 'edit_profile']);
+                else     
+                    return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('Username or Password is incorrect!'));
         }
-        
     }
         
     public function logout()
@@ -115,25 +120,13 @@ class UsersController extends AppController {
     public function my_profile() 
     {
         $this->layout = 'Users/my_profile';   
-        $data = $this->User->findById($this->Auth->user('id'));
-        
-        $t = null;
-        
-        foreach($data as $d)
-        {
-            $t = $d;    
-        }
-    
-        $data = $t;
-        
-        # exit();
-        $this->set(compact('data'));
+
+        $this->set('data', $this->User->findById($this->Auth->user('id')));
     }
     
     public function edit_profile($id = null)
     {
         if( empty($id) ) $id = $this->Auth->user('id');
-        
         
         if( empty($this->request->data ) )
         {
@@ -161,5 +154,12 @@ class UsersController extends AppController {
         }
         
         $this->set('prefectures',$this->User->Prefecture->find('list'));
+        $this->set('bodyTypes',$this->User->BodyType->find('list'));
+        $this->set('bloodTypes',$this->User->BloodType->find('list'));
+        
+        // debug($this->User->Prefecture->find('list'));
+        // debug($this->User->BodyType->find('list'));
+        // debug($this->User->BloodType->find('list'));
+        # exit();
     }
 }
