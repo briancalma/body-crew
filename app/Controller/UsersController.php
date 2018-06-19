@@ -115,9 +115,52 @@ class UsersController extends AppController {
     public function my_profile() 
     {
         $this->layout = 'Users/my_profile';   
+        $data = $this->User->findById($this->Auth->user('id'));
         
-        # $data = $this->Auth->user();
+        $t = null;
         
-        # $this->set(compact('data'));
+        foreach($data as $d)
+        {
+            $t = $d;    
+        }
+        
+        # echo $t['firstname'];
+        
+        # debug($t);
+        
+        $data = $t;
+        
+        # exit();
+        $this->set(compact('data'));
+    }
+    
+    public function edit_profile($id = null)
+    {
+        if( empty($id) ) $id = $this->Auth->user('id');
+        
+        if( empty($this->request->data ) )
+        {
+            $this->request->data = $this->User->findById($id);    
+        }
+        else 
+        {
+            if( $this->request->is(['post','put']) )
+            {
+                $this->User->id = $id;
+                
+                # debug($this->request->data);
+                
+                if( $this->User->save($this->request->data) )
+                {
+                    # $this->Auth->login( $this->request->data );
+                    
+                    $this->Flash->success(__('Updating Profile Success!'));
+                    
+                    $this->redirect(['action' => 'my_profile']);
+                }
+                
+                $this->Flash->error(__('Error in Updating Profile!'));
+            }
+        }
     }
 }

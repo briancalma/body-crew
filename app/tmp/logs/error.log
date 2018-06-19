@@ -404,3 +404,222 @@ Stack Trace:
 #9 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #10 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2018-06-19 05:59:26 Error: [ParseError] syntax error, unexpected '||' (T_BOOLEAN_OR), expecting end of file
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#1 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#2 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-19 05:59:32 Error: [ParseError] syntax error, unexpected '||' (T_BOOLEAN_OR), expecting end of file
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#1 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#2 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-19 06:00:08 Error: [NotFoundException] Invalid User
+Request URL: /users/edit
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(397): Scaffold->_scaffoldSave(Object(CakeRequest), 'edit')
+#1 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 06:00:22 Error: [NotFoundException] Invalid User
+Request URL: /users/update
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(397): Scaffold->_scaffoldSave(Object(CakeRequest), 'edit')
+#1 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 06:00:38 Error: [NotFoundException] Invalid User
+Request URL: /users/edit
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(397): Scaffold->_scaffoldSave(Object(CakeRequest), 'edit')
+#1 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 06:01:51 Error: [NotFoundException] Invalid User
+Request URL: /users/edit
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(397): Scaffold->_scaffoldSave(Object(CakeRequest), 'edit')
+#1 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 06:34:49 Error: [Error] Call to a member function user() on null
+Request URL: /users/edit_profile/10
+Stack Trace:
+#0 [internal function]: UsersController->edit_profile('10')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-19 06:34:58 Error: [Error] Access to undeclared static property: AppController::$auth
+Request URL: /users/edit_profile/10
+Stack Trace:
+#0 [internal function]: UsersController->edit_profile('10')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-19 07:11:35 Error: Fatal Error (64): Can't use method return value in write context in [/var/www/html/app/Controller/UsersController.php, line 138]
+2018-06-19 07:11:35 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /users/edit_profile/
+Stack Trace:
+#0 /var/www/html/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/var/www/html/a...', 138)
+#1 /var/www/html/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Can't use metho...', '/var/www/html/a...', 138, Array)
+#2 /var/www/html/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2018-06-19 07:11:52 Error: Fatal Error (64): Can't use method return value in write context in [/var/www/html/app/Controller/UsersController.php, line 138]
+2018-06-19 07:11:52 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /users/edit_profile/
+Stack Trace:
+#0 /var/www/html/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/var/www/html/a...', 138)
+#1 /var/www/html/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Can't use metho...', '/var/www/html/a...', 138, Array)
+#2 /var/www/html/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2018-06-19 07:14:29 Error: Fatal Error (64): Can't use method return value in write context in [/var/www/html/app/Controller/UsersController.php, line 138]
+2018-06-19 07:14:29 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /users/edit_profile/
+Stack Trace:
+#0 /var/www/html/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Can't use metho...', '/var/www/html/a...', 138)
+#1 /var/www/html/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Can't use metho...', '/var/www/html/a...', 138, Array)
+#2 /var/www/html/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2018-06-19 07:20:56 Error: [Error] Call to a member function user() on null
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:21:14 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:22:03 Error: [Error] Call to a member function user() on null
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:23:00 Error: [Error] Call to a member function User() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:23:15 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:23:52 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:24:08 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:24:25 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:24:41 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 07:25:03 Error: [Error] Call to a member function user() on array
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
