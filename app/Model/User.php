@@ -43,4 +43,7 @@ class User extends AppModel {
 			),
 		),
 	);
+	
+	public $belongsTo = 'Prefecture';
+	
 }

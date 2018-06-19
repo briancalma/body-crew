@@ -123,11 +123,7 @@ class UsersController extends AppController {
         {
             $t = $d;    
         }
-        
-        # echo $t['firstname'];
-        
-        # debug($t);
-        
+    
         $data = $t;
         
         # exit();
@@ -137,6 +133,7 @@ class UsersController extends AppController {
     public function edit_profile($id = null)
     {
         if( empty($id) ) $id = $this->Auth->user('id');
+        
         
         if( empty($this->request->data ) )
         {
@@ -162,5 +159,7 @@ class UsersController extends AppController {
                 $this->Flash->error(__('Error in Updating Profile!'));
             }
         }
+        
+        $this->set('prefectures',$this->User->Prefecture->find('list'));
     }
 }

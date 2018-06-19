@@ -36,7 +36,7 @@
      <br><br>
      <h1><b>Basic Information</b></h1>
      <ul style="list-style-type:none;">
-         <li><b>Prefecture :</b> <?= $data['perfecture'];?></li>
+         <li><b>Prefecture :</b> <?= $data['prefectures'];?></li>
          <li><b>City : </b> <?= $data['city'];?></li>
          <li><b>Address 1 :</b> <?= $data['address1'];?></li>
          <li><b>Address 2 : </b><?= $data['address2'];?></li>
