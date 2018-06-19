@@ -285,3 +285,122 @@ Stack Trace:
 #4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2018-06-19 01:51:40 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /login
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-19 02:21:30 Error: [Error] Call to undefined method UsersController::layout()
+Request URL: /users/my_profile
+Stack Trace:
+#0 [internal function]: UsersController->my_profile()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-19 02:22:01 Error: [MissingViewException] View file "Users/my_profile.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/my_profile.ctp',
+)
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(470): View->_getViewFileName('Users/my_profil...')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-19 02:22:44 Error: [MissingLayoutException] Layout file "Layouts/Users.my_profile.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/Users.my_profile.ctp',
+)
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(514): View->_getLayoutFileName('Users.my_profil...')
+#1 /var/www/html/lib/Cake/View/View.php(481): View->renderLayout('', 'Users.my_profil...')
+#2 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, 'Users.my_profil...')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-19 02:56:41 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /var/www/html/lib/Cake/View/View.php(858): HelperCollection->__isset('Auth')
+#2 /var/www/html/app/View/Users/my_profile.ctp(7): View->__get('Auth')
+#3 /var/www/html/lib/Cake/View/View.php(971): include('/var/www/html/a...')
+#4 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#5 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#6 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-06-19 03:04:58 Error: [Error] Call to undefined function array_split()
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-06-19 03:45:03 Error: [Error] Call to undefined function debu()
+Request URL: /
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(971): include()
+#1 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#2 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#3 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render('home', NULL)
+#4 /var/www/html/app/Controller/PagesController.php(72): Controller->render('home')
+#5 [internal function]: PagesController->display('home')
+#6 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-06-19 03:45:17 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 43564801 bytes) in [/var/www/html/lib/Cake/Utility/Debugger.php, line 603]
+2018-06-19 03:45:17 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 43564801 bytes)
+Request URL: /
+Stack Trace:
+#0 /var/www/html/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/html/l...', 603)
+#1 /var/www/html/lib/Cake/Core/App.php(970): ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/html/l...', 603, Array)
+#2 /var/www/html/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2018-06-19 04:34:13 Error: [MissingControllerException] Controller class SignupController could not be found.
+Exception Attributes: array (
+  'class' => 'SignupController',
+  'plugin' => NULL,
+)
+Request URL: /signup
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-19 05:26:46 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'perfecture' doesn't have a default value
+Request URL: /users/signup
+Stack Trace:
+#0 /var/www/html/lib/Cake/Model/Datasource/DboSource.php(472): PDOStatement->execute(Array)
+#1 /var/www/html/lib/Cake/Model/Datasource/DboSource.php(438): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 /var/www/html/lib/Cake/Model/Datasource/DboSource.php(1092): DboSource->execute('INSERT INTO `bo...')
+#3 /var/www/html/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /var/www/html/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /var/www/html/app/Controller/UsersController.php(76): Model->save(Array)
+#6 [internal function]: UsersController->signup()
+#7 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

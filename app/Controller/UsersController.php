@@ -112,5 +112,12 @@ class UsersController extends AppController {
         return false;
     }
     
-   
+    public function my_profile() 
+    {
+        $this->layout = 'Users/my_profile';   
+        
+        # $data = $this->Auth->user();
+        
+        # $this->set(compact('data'));
+    }
 }

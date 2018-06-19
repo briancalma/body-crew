@@ -37,15 +37,17 @@ class AppController extends Controller
     public $components = [
                              'Flash',
                              'Auth' =>  [
-                                            'loginRedirect' => ['controller' => 'users','action' => 'index'],
+                                            'loginRedirect' => ['controller' => 'users','action' => 'my_profile'],
                                             'logoutRedirect' => ['controller' => 'users','action' => 'login'],
                                             'authenticate' => ['Form' => ['passwordHasher' => 'Blowfish']],
                                             # 'authError' => 'Did you really think you are allowed to see that?',
                                         ]
                          ];
-                         
+                           
     public function beforeFilter() 
     {
         $this->Auth->allow('display' ,'index');
+        
+        $this->set('auth',$this->Auth);
     }
 }
