@@ -736,3 +736,74 @@ Stack Trace:
 #2 /var/www/html/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #3 [internal function]: App::shutdown()
 #4 {main}
+2018-06-20 06:01:15 Error: [ParseError] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /users/change_password
+Stack Trace:
+#0 [internal function]: App::load('UsersController')
+#1 [internal function]: spl_autoload_call('UsersController')
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(266): class_exists('UsersController')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-20 06:16:16 Error: [TypeError] Argument 1 passed to Hash::filter() must be of the type array, null given, called in /var/www/html/lib/Cake/View/Helper.php on line 576
+Request URL: /users/change_password/fde64ca858b996980ac82eb4db47852d5b29edbbe3e3a4.88891771
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/Helper.php(576): Hash::filter(NULL)
+#1 /var/www/html/lib/Cake/View/Helper/FormHelper.php(1054): Helper->setEntity(Array)
+#2 /var/www/html/app/View/Users/change_password.ctp(7): FormHelper->input(Array)
+#3 /var/www/html/lib/Cake/View/View.php(971): include('/var/www/html/a...')
+#4 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#5 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#6 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-06-20 06:16:25 Error: [TypeError] Argument 1 passed to Hash::filter() must be of the type array, null given, called in /var/www/html/lib/Cake/View/Helper.php on line 576
+Request URL: /users/change_password/fde64ca858b996980ac82eb4db47852d5b29edbbe3e3a4.88891771
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/Helper.php(576): Hash::filter(NULL)
+#1 /var/www/html/lib/Cake/View/Helper/FormHelper.php(1054): Helper->setEntity(Array)
+#2 /var/www/html/app/View/Users/change_password.ctp(7): FormHelper->input(Array)
+#3 /var/www/html/lib/Cake/View/View.php(971): include('/var/www/html/a...')
+#4 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#5 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#6 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#7 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2018-06-20 07:36:39 Error: [MissingActionException] Action UsersController::root() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'root',
+)
+Request URL: /users/root
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-20 07:53:57 Error: [Error] Class 'BlowfishPasswordHasher' not found
+Request URL: /users/change_password/fde64ca858b996980ac82eb4db47852d5b2a0393893a46.37518619
+Stack Trace:
+#0 [internal function]: UsersController->change_password('fde64ca858b9969...')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-20 08:19:57 Error: [ParseError] syntax error, unexpected 'if' (T_IF), expecting ',' or ';'
+Request URL: /users/change_password/fde64ca858b996980ac82eb4db47852d5b2a0dcf1f97a1.61414282
+Stack Trace:
+#0 [internal function]: App::load('UsersController')
+#1 [internal function]: spl_autoload_call('UsersController')
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(266): class_exists('UsersController')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+# App::uses('BlowfishPasswordHasher','Controller/Component/Auth');
 /**
  * Users Controller
  */
@@ -57,7 +58,6 @@ class UsersController extends AppController {
     public function signup()
     {
         $this->_checkIfAlreadyLoginned();
-        
         
         if( $this->request->is('post') )
         {
@@ -138,8 +138,6 @@ class UsersController extends AppController {
             {
                 $this->User->id = $id;
                 
-                # debug($this->request->data);
-                
                 if( $this->User->save($this->request->data) )
                 {
                     # $this->Auth->login( $this->request->data );
@@ -160,6 +158,60 @@ class UsersController extends AppController {
         // debug($this->User->Prefecture->find('list'));
         // debug($this->User->BodyType->find('list'));
         // debug($this->User->BloodType->find('list'));
-        # exit();
+        // exit();
     }
+    
+    public function change_password($token = null)
+    {
+        if( empty($token) )
+        {
+            $token = $this->Auth->user('reset_token');
+            
+            if( empty($token) )
+            {
+                $prefix = md5('bodycrew'); 
+                $token = uniqid($prefix,true);
+                
+                $this->User->read(null,$this->Auth->user('id'));
+                $this->User->set('reset_token',$token);
+                
+                $this->User->save(); 
+               
+                # echo "Inserting New Token And Is Updated";
+            }
+            
+            # TODO : Send Email With corresponding link
+            
+            $this->set('token',$token); 
+            $this->render('change_password_helper');   
+        }
+        else 
+        {
+            if( $this->request->is('post') )
+            {
+                $newPassword = $this->request->data['User']['newPassword'];
+                $confirmPassword = $this->request->data['User']['confirmPassword'];
+                
+                if( $newPassword != $confirmPassword )
+                {
+                    $this->Flash->error(__('Error Your New Password and Confirmation Password Did not match!'));
+                }
+                else 
+                {
+                    $this->User->read(null,$this->Auth->user('id'));
+                    $this->User->set(['reset_token' => '','password' => $newPassword]);
+                     
+                    if($this->User->save()) 
+                    {
+                        $this->Flash->success(__('Your Password is been updated!')); 
+                        return $this->redirect($this->Auth->logout());
+                    }
+                     
+                    $this->Flash->error(__('ERROR IN UPDATING PASSWOR'));   
+                }
+                    
+            }
+        }
+    }
+    
 }
