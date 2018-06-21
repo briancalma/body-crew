@@ -888,3 +888,292 @@ Request URL: /js/www.facebook.com
 Stack Trace:
 #0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2018-06-21 05:59:20 Error: [MissingActionException] Action UsersController::tokens() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'tokens',
+)
+Request URL: /users/tokens/save_token/dWU9cirOa_0:APA91bHGTlVnd42890A8QGWd1LT6jhqskSt4ycTQe7DZ3TsQTj3gx1jWXWjXxac2UhSvaaeeJulygfLTiO8_V_7-d6jmI0zslnD9IT9aBxTyhWW6RTKnRJroShG2T_uczEFJaK-EOjel
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 06:00:15 Error: [MissingActionException] Action UsersController::tokens() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'tokens',
+)
+Request URL: /users/tokens/save_token/dWU9cirOa_0:APA91bHGTlVnd42890A8QGWd1LT6jhqskSt4ycTQe7DZ3TsQTj3gx1jWXWjXxac2UhSvaaeeJulygfLTiO8_V_7-d6jmI0zslnD9IT9aBxTyhWW6RTKnRJroShG2T_uczEFJaK-EOjel
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 06:00:39 Error: [MissingActionException] Action UsersController::tokens() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'tokens',
+)
+Request URL: /users/tokens/save_token/dWU9cirOa_0:APA91bHGTlVnd42890A8QGWd1LT6jhqskSt4ycTQe7DZ3TsQTj3gx1jWXWjXxac2UhSvaaeeJulygfLTiO8_V_7-d6jmI0zslnD9IT9aBxTyhWW6RTKnRJroShG2T_uczEFJaK-EOjel
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 06:01:02 Error: [MissingViewException] View file "Tokens/save_token.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tokens/save_token.ctp',
+)
+Request URL: /tokens/save_token/dWU9cirOa_0:APA91bHGTlVnd42890A8QGWd1LT6jhqskSt4ycTQe7DZ3TsQTj3gx1jWXWjXxac2UhSvaaeeJulygfLTiO8_V_7-d6jmI0zslnD9IT9aBxTyhWW6RTKnRJroShG2T_uczEFJaK-EOjel
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(470): View->_getViewFileName('Tokens/save_tok...')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 06:01:16 Error: [MissingViewException] View file "Tokens/save_token.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tokens/save_token.ctp',
+)
+Request URL: /tokens/save_token/dWU9cirOa_0:APA91bHGTlVnd42890A8QGWd1LT6jhqskSt4ycTQe7DZ3TsQTj3gx1jWXWjXxac2UhSvaaeeJulygfLTiO8_V_7-d6jmI0zslnD9IT9aBxTyhWW6RTKnRJroShG2T_uczEFJaK-EOjel
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(470): View->_getViewFileName('Tokens/save_tok...')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 06:05:57 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')'
+Request URL: /tokens/save_token/dWU9cirOa_0:APA91bHGTlVnd42890A8QGWd1LT6jhqskSt4ycTQe7DZ3TsQTj3gx1jWXWjXxac2UhSvaaeeJulygfLTiO8_V_7-d6jmI0zslnD9IT9aBxTyhWW6RTKnRJroShG2T_uczEFJaK-EOjel
+Stack Trace:
+#0 [internal function]: App::load('TokensControlle...')
+#1 [internal function]: spl_autoload_call('TokensControlle...')
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(266): class_exists('TokensControlle...')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 06:38:51 Error: [ParseError] syntax error, unexpected ';', expecting ']'
+Request URL: /tokens/save_token
+Stack Trace:
+#0 [internal function]: App::load('TokensControlle...')
+#1 [internal function]: spl_autoload_call('TokensControlle...')
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(266): class_exists('TokensControlle...')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 06:39:24 Error: [ParseError] syntax error, unexpected ';', expecting ']'
+Request URL: /tokens/save_token
+Stack Trace:
+#0 [internal function]: App::load('TokensControlle...')
+#1 [internal function]: spl_autoload_call('TokensControlle...')
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(266): class_exists('TokensControlle...')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 07:11:23 Error: [Error] Call to a member function find() on null
+Request URL: /notify/push/I%20want%20to%20change%20for%20her/I%20love%20her%20so%20much/2
+Stack Trace:
+#0 [internal function]: NotifyController->push('I want to chang...', 'I love her so m...', '2')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(NotifyController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(NotifyController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:31:56 Error: [MissingViewException] View file "Users/logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/logout.ctp',
+)
+Request URL: /users/logout
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(470): View->_getViewFileName('Users/logout')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:44:00 Error: [Error] Call to a member function read() on null
+Request URL: /tokens/save_token
+Stack Trace:
+#0 [internal function]: TokensController->save_token()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(TokensController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:46:39 Error: [MissingActionException] Action UsersController::dummy() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'dummy',
+)
+Request URL: /users/dummy
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 07:46:43 Error: [MissingControllerException] Controller class TokesController could not be found.
+Exception Attributes: array (
+  'class' => 'TokesController',
+  'plugin' => NULL,
+)
+Request URL: /tokes/dummy
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-21 07:46:48 Error: [MissingActionException] Action TokensController::dummy() could not be found.
+Exception Attributes: array (
+  'controller' => 'TokensController',
+  'action' => 'dummy',
+)
+Request URL: /tokens/dummy
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-21 07:47:18 Error: [MissingActionException] Action TokensController::dummy() could not be found.
+Exception Attributes: array (
+  'controller' => 'TokensController',
+  'action' => 'dummy',
+)
+Request URL: /tokens/dummy
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-21 07:47:40 Error: [MissingActionException] Action TokensController::dummy() could not be found.
+Exception Attributes: array (
+  'controller' => 'TokensController',
+  'action' => 'dummy',
+)
+Request URL: /tokens/dummy
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-21 07:47:44 Error: [MissingActionException] Action TokensController::dummy() could not be found.
+Exception Attributes: array (
+  'controller' => 'TokensController',
+  'action' => 'dummy',
+)
+Request URL: /tokens/dummy
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-21 07:47:56 Error: [Error] Call to a member function read() on null
+Request URL: /tokens/dummy
+Stack Trace:
+#0 [internal function]: TokensController->dummy()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(TokensController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:48:12 Error: [Error] Call to a member function write() on null
+Request URL: /tokens/dummy
+Stack Trace:
+#0 [internal function]: TokensController->dummy()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(TokensController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:48:52 Error: [Error] Call to a member function write() on null
+Request URL: /tokens/dummy
+Stack Trace:
+#0 [internal function]: TokensController->dummy()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(TokensController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:50:50 Error: [Error] Call to a member function write() on null
+Request URL: /tokens/dummy
+Stack Trace:
+#0 [internal function]: TokensController->dummy()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(TokensController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 07:54:54 Error: [MissingActionException] Action TokensController::my() could not be found.
+Exception Attributes: array (
+  'controller' => 'TokensController',
+  'action' => 'my',
+)
+Request URL: /tokens/my
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TokensController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-21 07:55:52 Error: [MissingViewException] View file "Users/logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/logout.ctp',
+)
+Request URL: /users/logout
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(470): View->_getViewFileName('Users/logout')
+#1 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 08:03:01 Error: [Error] Call to a member function delete() on null
+Request URL: /users/logout
+Stack Trace:
+#0 [internal function]: UsersController->logout()
+#1 /var/www/html/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-06-21 09:55:30 Error: [MissingActionException] Action UsersController::views() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'views',
+)
+Request URL: /users/views
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-21 09:55:36 Error: [MissingActionException] Action UsersController::views() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'views',
+)
+Request URL: /users/views/3
+Stack Trace:
+#0 /var/www/html/lib/Cake/Controller/Scaffold.php(152): Scaffold->_scaffold(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

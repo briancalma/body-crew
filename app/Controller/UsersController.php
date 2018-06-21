@@ -52,6 +52,15 @@ class UsersController extends AppController {
         
     public function logout()
     {
+        $token = $this->Session->read('UserToken');
+        
+        $this->loadModel('Token');
+        
+        if( !empty($token) )
+        {
+            $this->Token->deleteAll(['Token.token' => $token],false);
+        }
+        
         return $this->redirect($this->Auth->logout());
     }
     

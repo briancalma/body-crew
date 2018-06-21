@@ -41,7 +41,8 @@ class AppController extends Controller
                                             'logoutRedirect' => ['controller' => 'users','action' => 'login'],
                                             'authenticate' => ['Form' => ['passwordHasher' => 'Blowfish']],
                                             # 'authError' => 'Did you really think you are allowed to see that?',
-                                        ]
+                                        ],
+                            'Session'
                          ];
                            
     public function beforeFilter() 

@@ -97,21 +97,19 @@
 	           .then(function(token){
 	               console.log('[TOKEN] ' + token);
 	               
+	               // token = encodeURI(token);
+	               dataString = 'token=' + token + "&user_id=" + '<?php echo $auth->user('id')?>';
 	               
-	            //  $.ajax({
-                //                 url : "tokens/savetoken/" + token,
-                //                 success : function(data) {
-                //                     if (data === '0') {
-                //                         console.log('CANNOT INSERT TOKEN : ' +  token + ' it is an existing one.');
-                //                     } else if(data === '1') {
-                //                         console.log('CANNOT INSERT TOKEN : ' +  token + ' it is an existing used by someone you must generate a token again.');
-                //                     }
-                                    
-                //                     console.log(data);
-                //                 }
-                //           }); 
-                          
-	               // insert token to the database
+                    $.ajax({
+                                type : 'POST',
+                                url : "/tokens/save_token",
+                                data : dataString,
+                                success : function(data) {
+                                   
+                                    // data = JSON.parse(data);
+                                    console.log(data);
+                                }
+                           }); 
 	           })
 	           .catch(function(err) {
 	               console.log('[Error] ' + err);

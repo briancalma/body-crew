@@ -48,6 +48,8 @@ class User extends AppModel {
 	
 	
 	
+	public $hasMany = 'Token';
+	
 	public $belongsTo = [
 							'Prefecture' => ['className' => 'Prefecture','foreignKey' => 'prefecture_id'],
 							'BloodType'  => ['className' => 'BloodType','foreignKey' => 'blood_type_id'],
