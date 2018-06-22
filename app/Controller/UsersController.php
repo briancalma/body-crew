@@ -223,4 +223,33 @@ class UsersController extends AppController {
         }
     }
     
+    
+    public function change_profile_pic()
+    {
+        if($this->request->is('post'))
+        {
+            $data = $this->request->data;
+            $photo_data = $data['User']['photo'];
+            
+            $filename = basename($photo_data['name']);
+            $upload_folder = WWW_ROOT.'img';
+            $filename = time()."_".$filename;
+            $upload_path = $upload_folder.DS.$filename;
+            
+            if(move_uploaded_file( $photo_data['tmp_name'],$upload_path ))
+            {
+                $this->User->read(null,$this->Auth->user('id'));
+                $this->User->set('profileimgpath',$filename);
+                $this->User->save();
+                
+                $this->Flash->success(__('SUCCESS IN UPDATING PROFILE PICTURE'));
+            }
+            else 
+            {
+                $this->Flash->error(__('ERROR IN UPDATING PROFILE PICTURE'));
+            }
+            
+            $this->set('profile_pic',$filename);
+        }
+    }
 }

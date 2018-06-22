@@ -1,7 +1,12 @@
 <?php $this->start('header'); ?>
     <table>
         <tr>
-            <td><?= $this->Html->image('default_user.png',['style' => 'width:100px;height:100px;']); ?></td>
+            <td>
+                <?php 
+                    echo $this->Html->image($data['User']['profileimgpath'],['style' => 'width:100px;height:100px;']); 
+                    echo "<br>".$this->Html->link('Change Profile Picture',['action' => 'change_profile_pic']);
+                ?>
+            </td>
             <td>
                 <ul style="list-style-type:none;">
                     <li><b>Username</b>  : <?= ucfirst( $auth->user('username') );?></li>
@@ -98,7 +103,7 @@
 	               console.log('[TOKEN] ' + token);
 	               
 	               // token = encodeURI(token);
-	               dataString = 'token=' + token + "&user_id=" + '<?php echo $auth->user('id')?>';
+	              dataString = 'token=' + token + "&user_id=" + '<?php echo $auth->user('id')?>';
 	               
                     $.ajax({
                                 type : 'POST',
