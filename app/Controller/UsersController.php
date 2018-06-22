@@ -252,4 +252,11 @@ class UsersController extends AppController {
             $this->set('profile_pic',$filename);
         }
     }
+    
+    // public function dummy()
+    // {
+    //     # $this->Push->shout();
+    //     $this->Push->send('ME',[''],['title' => 'Hello','body' => 'Hello World']);
+    //     exit();
+    // }
 }

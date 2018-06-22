@@ -42,7 +42,9 @@ class AppController extends Controller
                                             'authenticate' => ['Form' => ['passwordHasher' => 'Blowfish']],
                                             # 'authError' => 'Did you really think you are allowed to see that?',
                                         ],
-                            'Session'
+                            'Session',
+                            'PushManager.Push'
+                            # 'PushManager.PushManagerAppController'
                          ];
                            
     public function beforeFilter() 
