@@ -113,11 +113,9 @@ class TokensController extends AppController {
 			$token = $this->request->data('token');
 			$id = $this->request->data('user_id');
 			
-			if( $this->Token->find('count',['token' => $token]) )
-			{
-				echo "Token Exist!";
-			}
-			else 
+			$result = $this->Token->findByToken($token);
+			
+			if( empty($result) ) 
 			{
 				if ($this->Token->save($this->request->data))
 				{
@@ -127,9 +125,12 @@ class TokensController extends AppController {
 				{
 					echo "Cannot insert token!";
 				}
-				
 			}
-			
+			else
+			{
+				echo "TOKEN EXIST!";
+			}
+						
 			if( empty( $this->Session->read('UserToken') ))
 				$this->Session->write('UserToken',$token);
 		}

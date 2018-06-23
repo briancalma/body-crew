@@ -6,11 +6,6 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
-/**
- * Scaffold
- *
- * @var mixed
- */
 	public $scaffold;
 	
     public function beforeFilter() 
@@ -35,17 +30,22 @@ class UsersController extends AppController {
     public function login()
     {
         if( $this->request->is('post') ) 
-        {
+        {   
+            # Checks if the username and password is correct
             if( $this->Auth->login() ) 
             {
-                # debug($this->Auth->user());   
-                # debug($this->Auth->redirectUrl());
-                
+                # if username and password is correct
+                # checks if the user did not fillup his/her basic information
+                # if so then this will redirect the user to the edit_profile page
+                # else redirect the user to the main_profile page
+    
                 if( empty($this->Auth->user('firstname')) || empty($this->Auth->user('lastname')) )
                     return $this->redirect(['action' => 'edit_profile']);
                 else     
                     return $this->redirect($this->Auth->redirectUrl());
             }
+            
+            # display and error message
             $this->Flash->error(__('Username or Password is incorrect!'));
         }
     }
@@ -70,29 +70,28 @@ class UsersController extends AppController {
         
         if( $this->request->is('post') )
         {
+            # Getting of Form data
             $username = $this->request->data['User']['username'];
-            
             $email = $this->request->data['User']['emailaddress'];
-            
             $password = $this->request->data['User']['password'];
             
+            # Validations and checking
             $emailExist = $this->_checkIfEmailExist( $email );
-            
             $usernameExist = $this->_checkIfUsernameExist( $username );
-            
             $isPasswordMatch = $password ===  $this->request->data['User']['passwordb'];
+            $isValidRole = $this->request->data['User']['role'] == 'student' || $this->request->data['User']['role'] == 'trainer' ? true : false;
             
             if(!$isPasswordMatch)
                 $this->Flash->error(__('Password field did not match!'));
             
-            if( !$emailExist && !$usernameExist && $isPasswordMatch )
+            if(!$isValidRole)
+                $this->Flash->error(__('Invalid Account type please specify a valid account type!'));
+            
+            if( !$emailExist && !$usernameExist && $isPasswordMatch  && $isValidRole)
             {
+                # If all the validations is satisfied then save the data
                 if( $this->User->save($this->request->data) )
                 {
-                    # TODO 
-                    # 1. Send an email to the user account for account confirmation.
-                    # 2. Show Email Confirmation Page.       
-                    
                     $this->Flash->success(__('Account Successfully Created! You can now login'));
                     return $this->redirect(['action' => 'login']);
                 }
@@ -172,25 +171,34 @@ class UsersController extends AppController {
     
     public function change_password($token = null)
     {
+        # Change Password Parts
+        # 1. Rendering a View that depends upon the value of the token 
+        #    - if the value of token is empty this will render the change password helper
+        #    - else it will render the default change_password view    
+        # 2. Generation of TOKEN if token variable is empty
+        #   - generate a unique id from the hash 'bodycrew' string
+        #   - save the token to the reset_token field
+        # 3. Change Password Form Submit
+        #   - save the new password after some validations
+        #   - delete the reset key
+        
         if( empty($token) )
         {
             $token = $this->Auth->user('reset_token');
             
             if( empty($token) )
             {
+                # RESET Token Generation
                 $prefix = md5('bodycrew'); 
                 $token = uniqid($prefix,true);
                 
+                # Saving of reset token
                 $this->User->read(null,$this->Auth->user('id'));
                 $this->User->set('reset_token',$token);
-                
                 $this->User->save(); 
-               
-                # echo "Inserting New Token And Is Updated";
             }
             
             # TODO : Send Email With corresponding link
-            
             $this->set('token',$token); 
             $this->render('change_password_helper');   
         }
@@ -198,15 +206,18 @@ class UsersController extends AppController {
         {
             if( $this->request->is('post') )
             {
+                # Getting of Form Data
                 $newPassword = $this->request->data['User']['newPassword'];
                 $confirmPassword = $this->request->data['User']['confirmPassword'];
                 
+                # Simple Validation Check
                 if( $newPassword != $confirmPassword )
                 {
                     $this->Flash->error(__('Error Your New Password and Confirmation Password Did not match!'));
                 }
                 else 
                 {
+                    # Saving of the new password and deleting the reset token
                     $this->User->read(null,$this->Auth->user('id'));
                     $this->User->set(['reset_token' => '','password' => $newPassword]);
                      
@@ -218,14 +229,14 @@ class UsersController extends AppController {
                      
                     $this->Flash->error(__('ERROR IN UPDATING PASSWOR'));   
                 }
-                    
             }
         }
     }
     
-    
     public function change_profile_pic()
     {
+        $filename = $this->User->find('first',['conditions' => ['User.id' => $this->Auth->user('id')], 'fields' => 'User.profileimgpath']);
+     
         if($this->request->is('post'))
         {
             $data = $this->request->data;
@@ -243,20 +254,15 @@ class UsersController extends AppController {
                 $this->User->save();
                 
                 $this->Flash->success(__('SUCCESS IN UPDATING PROFILE PICTURE'));
+                return $this->redirect(['action' => 'my_profile']);
             }
             else 
             {
                 $this->Flash->error(__('ERROR IN UPDATING PROFILE PICTURE'));
             }
-            
-            $this->set('profile_pic',$filename);
         }
+        
+        if(!empty($filename['User']['profileimgpath']))
+            $this->set('profile_pic',$filename['User']['profileimgpath']);
     }
-    
-    // public function dummy()
-    // {
-    //     # $this->Push->shout();
-    //     $this->Push->send('ME',[''],['title' => 'Hello','body' => 'Hello World']);
-    //     exit();
-    // }
 }

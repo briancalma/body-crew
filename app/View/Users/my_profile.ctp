@@ -103,7 +103,7 @@
 	               console.log('[TOKEN] ' + token);
 	               
 	               // token = encodeURI(token);
-	              dataString = 'token=' + token + "&user_id=" + '<?php echo $auth->user('id')?>';
+	              dataString = 'token=' + token + "&user_id=" + "<?php echo $auth->user('id')?>";
 	               
                     $.ajax({
                                 type : 'POST',
