@@ -1,5 +1,4 @@
 <!-- Simple Signup Form -->
-
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
 	<fieldset> 
@@ -14,4 +13,3 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Register')); ?>
 </div>
-

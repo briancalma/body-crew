@@ -9,8 +9,10 @@
     echo $this->Form->create('User', ['type' => 'file']);
     echo $this->Form->input('photo',[
         'between' => '<br />',
-        'type' => 'file'
+        'type' => 'file',
+        'required' => 'true'
     ]);
     
     echo $this->Form->end('Submit');
     echo $this->Html->link('Back',['action' => 'my_profile']);
+?>

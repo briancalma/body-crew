@@ -111,3 +111,5 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::load('PushManager', array('bootstrap' => false, 'routes' => false));
+
+CakePlugin::load('PushPanda', array('bootstrap' => false, 'routes' => false));

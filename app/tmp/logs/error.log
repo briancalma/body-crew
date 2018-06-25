@@ -1416,3 +1416,274 @@ Request URL: /img/1
 Stack Trace:
 #0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2018-06-25 02:29:26 Error: [ParseError] syntax error, unexpected ';'
+Request URL: /users/my_profile
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#1 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#2 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-25 02:29:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/img/default_user.png
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 06:22:41 Error: [MissingControllerException] Controller class PushpandaController could not be found.
+Exception Attributes: array (
+  'class' => 'PushpandaController',
+  'plugin' => NULL,
+)
+Request URL: /pushpanda/
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 06:22:58 Error: [MissingControllerException] Controller class PushpandaController could not be found.
+Exception Attributes: array (
+  'class' => 'PushpandaController',
+  'plugin' => NULL,
+)
+Request URL: /pushpanda/pages
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 06:23:20 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /push_panda/pages
+Stack Trace:
+#0 /var/www/html/lib/Cake/Model/Model.php(3673): Model->setSource('pages')
+#1 /var/www/html/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /var/www/html/lib/Cake/Model/Model.php(1490): Model->schema()
+#3 /var/www/html/lib/Cake/Model/Model.php(1477): Model->hasField('title', false)
+#4 /var/www/html/lib/Cake/Model/Model.php(914): Model->hasField(Array)
+#5 /var/www/html/lib/Cake/Controller/Scaffold.php(130): Model->__get('displayField')
+#6 /var/www/html/lib/Cake/Controller/Controller.php(536): Scaffold->__construct(Object(PagesController), Object(CakeRequest))
+#7 /var/www/html/lib/Cake/Controller/Controller.php(495): Controller->_getScaffold(Object(CakeRequest))
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#10 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-06-25 06:23:35 Error: [MissingActionException] Action PagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'index',
+)
+Request URL: /push_panda/pages
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-25 06:32:00 Error: [MissingLayoutException] Layout file "Layouts/Pages.main_layout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/Pages.main_layout.ctp',
+)
+Request URL: /push_panda/pages/
+Stack Trace:
+#0 /var/www/html/lib/Cake/View/View.php(514): View->_getLayoutFileName('Pages.main_layo...')
+#1 /var/www/html/lib/Cake/View/View.php(481): View->renderLayout('', 'Pages.main_layo...')
+#2 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, 'Pages.main_layo...')
+#3 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#5 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-06-25 06:38:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/panda_logo.jpg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 06:41:04 Error: [MissingControllerException] Controller class PandaLogo.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'PandaLogo.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /panda_logo.jpg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 06:41:28 Error: [MissingControllerException] Controller class PluginController could not be found.
+Exception Attributes: array (
+  'class' => 'PluginController',
+  'plugin' => NULL,
+)
+Request URL: /plugin/panda_logo.jpg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 06:42:20 Error: [MissingControllerException] Controller class PandaLogo.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'PandaLogo.jpgController',
+  'plugin' => 'PushPanda',
+)
+Request URL: /push_panda/panda_logo.jpg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 07:00:10 Error: [MissingActionException] Action PagesController::vendor() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'vendor',
+)
+Request URL: /push_panda/pages/vendor/jquery/jquery.min.js
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-25 07:00:10 Error: [MissingActionException] Action PagesController::vendor() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'vendor',
+)
+Request URL: /push_panda/pages/vendor/bootstrap/js/bootstrap.bundle.min.js
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-06-25 07:01:09 Error: [MissingControllerException] Controller class VendorController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorController',
+  'plugin' => 'PushPanda',
+)
+Request URL: /push_panda/vendor/jquery/jquery.min.js
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 07:01:10 Error: [MissingControllerException] Controller class VendorController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorController',
+  'plugin' => 'PushPanda',
+)
+Request URL: /push_panda/vendor/bootstrap/js/bootstrap.bundle.min.js
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 07:59:06 Error: [MissingControllerException] Controller class DocsController could not be found.
+Exception Attributes: array (
+  'class' => 'DocsController',
+  'plugin' => NULL,
+)
+Request URL: /docs/4.0/assets/brand/bootstrap-solid.svg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 08:19:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => 'PushPanda',
+)
+Request URL: /push_panda/img/panda_log.jpg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 08:20:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => 'PushPanda',
+)
+Request URL: /push_panda/img/panda_logo.jpp
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 08:24:01 Error: [MissingControllerException] Controller class DocsController could not be found.
+Exception Attributes: array (
+  'class' => 'DocsController',
+  'plugin' => NULL,
+)
+Request URL: /docs/4.0/assets/brand/bootstrap-solid.svg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 08:27:24 Error: [MissingControllerException] Controller class DocsController could not be found.
+Exception Attributes: array (
+  'class' => 'DocsController',
+  'plugin' => NULL,
+)
+Request URL: /docs/4.0/assets/brand/bootstrap-solid.svg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 08:32:39 Error: [MissingControllerException] Controller class DocsController could not be found.
+Exception Attributes: array (
+  'class' => 'DocsController',
+  'plugin' => NULL,
+)
+Request URL: /docs/4.0/assets/brand/bootstrap-solid.svg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 08:36:48 Error: [MissingControllerException] Controller class DocsController could not be found.
+Exception Attributes: array (
+  'class' => 'DocsController',
+  'plugin' => NULL,
+)
+Request URL: /docs/4.0/assets/brand/bootstrap-solid.svg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-06-25 09:02:11 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /push_panda/pages
+Stack Trace:
+#0 /var/www/html/lib/Cake/Model/Model.php(3673): Model->setSource('pages')
+#1 /var/www/html/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /var/www/html/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /var/www/html/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('Page', 'fields')
+#4 /var/www/html/app/Plugin/PushPanda/View/Pages/index.ctp(1): FormHelper->create()
+#5 /var/www/html/lib/Cake/View/View.php(971): include('/var/www/html/a...')
+#6 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#7 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#8 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#9 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#11 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-06-25 09:02:20 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /push_panda/pages
+Stack Trace:
+#0 /var/www/html/lib/Cake/Model/Model.php(3673): Model->setSource('pages')
+#1 /var/www/html/lib/Cake/Model/Model.php(1394): Model->getDataSource()
+#2 /var/www/html/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#3 /var/www/html/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('Page', 'fields')
+#4 /var/www/html/app/Plugin/PushPanda/View/Pages/index.ctp(1): FormHelper->create()
+#5 /var/www/html/lib/Cake/View/View.php(971): include('/var/www/html/a...')
+#6 /var/www/html/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/a...', Array)
+#7 /var/www/html/lib/Cake/View/View.php(473): View->_render('/var/www/html/a...')
+#8 /var/www/html/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#9 /var/www/html/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#10 /var/www/html/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#11 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-06-25 09:03:59 Error: [MissingControllerException] Controller class DocsController could not be found.
+Exception Attributes: array (
+  'class' => 'DocsController',
+  'plugin' => NULL,
+)
+Request URL: /docs/4.0/assets/brand/bootstrap-solid.svg
+Stack Trace:
+#0 /var/www/html/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

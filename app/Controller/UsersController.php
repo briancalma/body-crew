@@ -127,8 +127,7 @@ class UsersController extends AppController {
     
     public function my_profile() 
     {
-        $this->layout = 'Users/my_profile';   
-
+        $this->layout = 'Users/my_profile';
         $this->set('data', $this->User->findById($this->Auth->user('id')));
     }
     
@@ -136,37 +135,27 @@ class UsersController extends AppController {
     {
         if( empty($id) ) $id = $this->Auth->user('id');
         
-        if( empty($this->request->data ) )
-        {
-            $this->request->data = $this->User->findById($id);    
-        }
+        if( empty($this->request->data) )
+            $this->request->data = $this->User->findById($id);    # sets up the value of the edit form
         else 
         {
+            # If a form is been submitted
             if( $this->request->is(['post','put']) )
             {
                 $this->User->id = $id;
-                
                 if( $this->User->save($this->request->data) )
                 {
-                    # $this->Auth->login( $this->request->data );
-                    
                     $this->Flash->success(__('Updating Profile Success!'));
-                    
                     $this->redirect(['action' => 'my_profile']);
                 }
-                
                 $this->Flash->error(__('Error in Updating Profile!'));
             }
         }
         
+        # Setting option fields to the view
         $this->set('prefectures',$this->User->Prefecture->find('list'));
         $this->set('bodyTypes',$this->User->BodyType->find('list'));
         $this->set('bloodTypes',$this->User->BloodType->find('list'));
-        
-        // debug($this->User->Prefecture->find('list'));
-        // debug($this->User->BodyType->find('list'));
-        // debug($this->User->BloodType->find('list'));
-        // exit();
     }
     
     public function change_password($token = null)
@@ -235,34 +224,44 @@ class UsersController extends AppController {
     
     public function change_profile_pic()
     {
+        # Gets the user profile image path from the session
         $filename = $this->User->find('first',['conditions' => ['User.id' => $this->Auth->user('id')], 'fields' => 'User.profileimgpath']);
-     
+        
+        # Checks if the user submits a form 
         if($this->request->is('post'))
         {
-            $data = $this->request->data;
-            $photo_data = $data['User']['photo'];
-            
-            $filename = basename($photo_data['name']);
-            $upload_folder = WWW_ROOT.'img';
-            $filename = time()."_".$filename;
-            $upload_path = $upload_folder.DS.$filename;
-            
-            if(move_uploaded_file( $photo_data['tmp_name'],$upload_path ))
+            # Checks if the data pass by the user is not empty
+            # For some reason if the user pass a big size file 
+            # The form will malfunction and thus return an empty array request data
+            if( !empty($this->request->data) )
             {
-                $this->User->read(null,$this->Auth->user('id'));
-                $this->User->set('profileimgpath',$filename);
-                $this->User->save();
+                $data = $this->request->data;
+                $photo_data = $data['User']['photo'];
                 
-                $this->Flash->success(__('SUCCESS IN UPDATING PROFILE PICTURE'));
-                return $this->redirect(['action' => 'my_profile']);
-            }
-            else 
-            {
-                $this->Flash->error(__('ERROR IN UPDATING PROFILE PICTURE'));
+                # Image Type Validation
+                if( $photo_data['type'] == 'image/gif' || $photo_data['type'] == 'image/png' || $photo_data['type'] == 'image/jpg')
+                {
+                    $filename = basename($photo_data['name']);
+                    $upload_folder = WWW_ROOT.'img';
+                    $filename = time()."_".$filename;
+                    $upload_path = $upload_folder.DS.$filename;
+                    
+                    # Uploading the image
+                    if(move_uploaded_file( $photo_data['tmp_name'],$upload_path ))
+                    {
+                        $this->User->read(null,$this->Auth->user('id'));
+                        $this->User->set('profileimgpath',$filename);
+                        $this->User->save();
+                        $this->Flash->success(__('SUCCESS IN UPDATING PROFILE PICTURE'));
+                        return $this->redirect(['action' => 'my_profile']);
+                    }
+                    else $this->Flash->error(__('ERROR IN UPDATING PROFILE PICTURE'));
+                }
+                else $this->Flash->error(__('Error Make sure that your file is an image type : Possible types must be GIF,PNG,JPG'));
             }
         }
         
-        if(!empty($filename['User']['profileimgpath']))
-            $this->set('profile_pic',$filename['User']['profileimgpath']);
+        # sets the profile image for rendering in the view  
+        if( !empty($filename['User']['profileimgpath']) ) $this->set('profile_pic',$filename['User']['profileimgpath']);
     }
 }
