@@ -1,4 +1,4 @@
-<?php echo $this->Form->create("Push");?>
+<?php echo $this->Form->create("Push",['type' => 'file']);?>
     <div class="row">
         <div class="col">
             <br><h5>PRIMARY SECTION</h5><hr>
@@ -18,6 +18,7 @@
                 <?php echo $this->Form->input("icon",["type" => "file","class" => "form-control"]);?>
                 <small id="iconHelp" class="form-text text-muted">Maximum Size :  Best Fit : </small>
             </div>
+           
         </div>
         <div class="col">
             <br><h5>Advance Section</h5><hr>
@@ -28,17 +29,20 @@
             <div class="form-group">
                 <?php echo $this->Form->input("actionButtons",["type" => "select","class" => "form-control","options" => ["1" => "1","2" => "2"]]);?>
                 <small id="actionButtonHelp" class="form-text text-muted">This is only applicable to google chrome users in window.</small>
-             </div>
-            <div class="form-group">
-                <?php echo $this->Form->input("hideDelay",["type" => "number","class" => "form-control","placeholder" => "Enter Duration *","min" => "1"]); ?>
-                <small id="hideDelay" class="form-text text-muted">Decide if how long does this notifcation will last in terms of seconds.</small>
             </div>
             <div class="form-group">
-                <?php echo $this->Form->input("schedulePush",["type" => "datetime-local","value" => "2018-07-10","class" => "form-control","placeholder" => "Enter The Time and date you want to trigger such PUSH *"]); ?>
-                <small id="schedulePush" class="form-text text-muted">This will automatically trigger a push notification at a given time.</small>
+                <?php echo $this->Form->input("subscribers",["type" => "select","multiple" => "multiple","class" => "form-control"]);?>
+                <small id="iconHelp" class="form-text text-muted">Select A list of subsribers you want to send push notification</small>
             </div>
+            <!--<div class="form-group">-->
+            <!--    <?php echo $this->Form->input("hideDelay",["type" => "number","class" => "form-control","placeholder" => "Enter Duration *","min" => "1"]); ?>-->
+            <!--    <small id="hideDelay" class="form-text text-muted">Decide if how long does this notifcation will last in terms of seconds.</small>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+            <!--    <?php echo $this->Form->input("schedulePush",["type" => "datetime-local","value" => "2018-07-10","class" => "form-control","placeholder" => "Enter The Time and date you want to trigger such PUSH *"]); ?>-->
+            <!--    <small id="schedulePush" class="form-text text-muted">This will automatically trigger a push notification at a given time.</small>-->
+            <!--</div>-->
              <?php echo $this->Form->submit("Send Push",["class" => "btn btn-success","style" => "height:70px;width:100%;font-size:25px;"]);?>
-             <?php echo $this->Form->end()?>
         </div>
     </div>
-</form>
+<?php echo $this->Form->end()?>

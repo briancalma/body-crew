@@ -25,7 +25,8 @@ messaging.setBackgroundMessageHandler( function(payload) {
     var notificationOption = {
                             "body" : payload.data.body,
                             "icon" : payload.data.icon,
-                            "click_action" : payload.data.click_action
+                            "click_action" : payload.data.click_action,
+                            "image" : payload.data.image
                        };
     target_url = payload.data.click_action;                
                        

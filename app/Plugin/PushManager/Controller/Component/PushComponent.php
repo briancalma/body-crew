@@ -3,7 +3,7 @@ App::uses('Component', 'Controller');
 
 class PushComponent extends Component 
 {
-   public function send($sender = null,$recievers = [], $data = []) 
+   public function send($recievers = [], $data = []) 
    {
    	   # SERVER_API_KEY is unique key from your PUSH NOTIFICATION PROVIDER 
    	   # In this part i am using Firebase Cloud Messaging 
@@ -20,7 +20,10 @@ class PushComponent extends Component
 			   	   ];	
  		
  	   # Calling a helper function that validates message data.
+ 	   
  	   $data = $this->validate_data($data);
+ 	   
+ 	   # debug($data);
  	   
  	   # MESSAGE CONFIGURATION 
 	   $message = [
@@ -28,8 +31,11 @@ class PushComponent extends Component
         		    "body" =>  $data['body'],
         		    "icon" => $data['icon'],
         		    // "image" => $dat['image'],
-        		    "click_action" => $data['click_action']
+        		    "click_action" => $data['click_action'],
+        		    "image" => $data["image"]
    		          ];
+		# debug($recievers);
+
 
 	   # Payload is the data that is send to the target url 
 	   # In this part the payload array holds the tokens / registration_ids of the users 
@@ -64,7 +70,8 @@ class PushComponent extends Component
 		  echo $response;
 		  // header("location:notifier.php");
 	   }
-		// exit();
+	   
+	   exit();
    }
    
    public function validate_data( $data )
@@ -88,6 +95,16 @@ class PushComponent extends Component
 		return $data;
    }
    
-   
-   
+   public function generate_data($title = null,$body = null, $icon = null, $click_action = null)
+   {
+   	   $data = [
+        			"title" => $title,
+        		    "body" =>  $body,
+        		    "icon" => $icon,
+        		    // "image" => $dat['image'],
+        		    "click_action" => $click_action
+   	           ];
+   	           
+   	   return $data;     
+   }
 }

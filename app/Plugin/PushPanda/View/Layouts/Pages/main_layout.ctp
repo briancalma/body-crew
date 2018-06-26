@@ -29,7 +29,7 @@
     <?php echo $this->element('PushPanda.navbar');?>
     
     <div class="container-fluid">
-        <?php echo $this->fetch('content');?>
+        <?php echo $this->fetch('content'); ?>
     </div>
 </body>
 </html>
